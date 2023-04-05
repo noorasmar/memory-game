@@ -81,7 +81,6 @@ main .flip-card-front {
     color: black;
 }
 main .flip-card-back {
-    background-color: #2980b9;
     color: white;
     display: flex;
     justify-content: center;
