@@ -1,4 +1,4 @@
-// document.getElementById("start-btn").addEventListener("click", removeLayer);
+document.getElementById("start-btn").addEventListener("click", removeLayer);
 const flipCards = document.querySelectorAll(".flip-card:not(.close)");
 let arr = []
 const cards = []
@@ -28,10 +28,17 @@ function setData(data){
     if(arr.length === 2){
         const result = checkData(arr[0], arr[1])
         if(result){
+            if(cards.length === 8){
+                let success = document.getElementsByClassName('success');
+                success[0].classList.add('appear');
+            }
+            console.log(cards.length)
         }else{
             setTimeout(() => {
                 cards[cards.length-1].classList.remove('flipped')
                 cards[cards.length-2].classList.remove('flipped')
+                cards.pop()
+                cards.pop()
             }, 1000);
             count++
             document.getElementById('count').innerText = count
