@@ -1,4 +1,9 @@
+document.getElementById("myForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+});
+
 document.getElementById("start-btn").addEventListener("click", removeLayer);
+
 const flipCards = document.querySelectorAll(".flip-card:not(.close)");
 let arr = []
 const cards = []
